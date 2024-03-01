@@ -102,7 +102,7 @@ const cardContentDC = [
     },
     {
         title: "Batman",
-        img: "../images/Batman.jpg",
+        img: "images/Batman.jpg",
     },
     {
         title: "Wonder Woman",
@@ -256,6 +256,7 @@ botones.forEach((botonDC, index2) => {
 function buscarEnArray() {
     const textoBusqueda = document.getElementById("textoBusqueda").value;
     const resultado = buscarPorTexto(textoBusqueda);
+    console.log(resultado);
     const id = obtenerIdPorTexto(textoBusqueda);
     console.log(id);
     const resultadoDiv = document.getElementById("resultado");
@@ -267,10 +268,10 @@ function buscarEnArray() {
                 const el = cardContent[id-1];
                 const $clone5 = document.importNode($templateModal, true);
     
-                $clone5.querySelector("#h11").textContent = el.title;
-                $clone5.querySelector(".imagenModal").setAttribute("src", el.img);
-                $clone5.querySelector(".imagenModal").setAttribute("alt", el.title);
-                $clone5.querySelector("figcaption").textContent = el.title;
+                $clone5.querySelector("#h11").textContent = elemento.title;
+                $clone5.querySelector(".imagenModal").setAttribute("src", elemento.img);
+                $clone5.querySelector(".imagenModal").setAttribute("alt", elemento.title);
+                $clone5.querySelector("figcaption").textContent = elemento.title;
     
                 
                 $fragmentModal.appendChild($clone5);
