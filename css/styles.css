@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color:rgb(19, 18, 18);
+}
+
+.icono_titulo{
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    float: left;
+    align-items: center;
+    border: solid 1px;
+}
+#marvel, #dc{ /*logo de marvel*/
+    width: 5%;
+    height: 100%;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-auto-rows: minmax(250px,auto-fill);
+    grid-auto-flow:dense;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.icono_titulo{
+    grid-column: 1/6;
+    grid-row: 1;
+}
+.boton{
+    /* width: 60px;
+    height: 30px; */
+    justify-content: center;
+    align-items: center;
+
+}
+.imagenM{
+    width: 200px;
+    height: 200px;
+    margin: 10px 20px 0px 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.spiderMan{
+    width: 300px;
+    height: 300px;
+}
+
+.nombreBoton{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.imagenDC{
+    width: 200px;
+    height: 200px;
+    margin: 10px 20px 0px 20px;
+    padding: 20px;
+    
+}
+.card-container2{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-auto-rows: minmax(250px,auto-fill);
+    grid-auto-flow:dense;
+    gap: 20px;
+    padding: 20px;
+    
+}
+figcaption{
+    color: white;
+}
+h1{
+    color: white;
+}
+#h11{
+    color: black;
+}
+.modal-container{
+    display: block;
+    background-color: rgba(104, 175, 172, 0.404);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+
+    
+}
+.modal{
+    display: flex;
+    background-color: #FFFFFF;
+    width: 40%;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 100px auto;
+}
+.boton{
+
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+  border-radius: 10px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 16px;
+  margin: 0;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+.boton2{
+
+    align-items: center;
+    background-color: initial;
+    background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+    border-radius: 10px;
+    border-width: 0;
+    box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: center;
+    font-family: Quicksand,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 16px;
+    margin: 10px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+  }
+.show {
+    pointer-events: auto;
+    display: block;
+}
+.regresar{
+    display: none;
+}
+#cerrarModal.show{
+    display: block;
+}
+.imagenModal{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+.imagenM:hover{
+    scale: 1.1;
+}
+#textbus{
+    color: #FFFFFF;
+    margin: 0px 0px 0px 30px;
+}
+
+#resultado{
+    color: #FFFFFF;
+}
+@media(max-width:900px){
+    #marvel, #dc{ /*logo de marvel*/
+        width: 20%;
+        height: 100%;
+        border-radius: 50%;
+        margin: 10px;
+    }
+    .boton {
+        font-size: 21px;
+        padding: 18px 34px;
+      }
+    .modal{
+        display: block;
+    }
+}
+@media(max-width:700px){
+    .imagenModal{
+        width: 100%;
+        height: 100%;
+    }
+   
+}

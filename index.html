@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="modal-container" id="modal-container">
+        <template id="template-modal">
+        <div class="modal">
+            
+            <figure class="figModal">
+            <img src="" alt="" class="imagenModal">
+            <figcaption></figcaption>
+            </figure>
+            <div class="descripcion">
+            <h2 id="h11">Nombre superheroe</h2>
+            <p div="textoModal">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sunt cupiditate maxime libero eius accusamus aliquam architecto minima itaque officia ducimus perspiciatis, assumenda sapiente, nobis labore harum fugiat tenetur autem.
+            </p>
+            
+        </div>
+        </div>
+    </template>
+    <button id="cerrarModal">Cerrar Modal</button>
+    </div>
+    <main class="contenedor">
+        
+        <div class="icono_titulo">
+            <img src="images/logoMarvel.png" alt="marvel" id="marvel">
+            <br>
+            <br>
+            <h1>Heroes Marvel</h1>
+            
+            <form id="formulario">
+                <label for="textoBusqueda" id="textbus">Buscar Personaje:</label>
+                <input type="text" id="textoBusqueda" name="textoBusqueda">
+                <button type="button" onclick="buscarEnArray()">Buscar</button>
+            </form>
+        
+            <div id="resultado"></div>
+        </div>
+        <div class="card-container" id="cards-container">
+            <template id="template-card">
+                <figure class="card">
+                    <img src="" alt="" class="imagenM">
+                    <div class="nombreBoton">  
+                        <figcaption></figcaption>
+                        <input type="button" class="boton" id="open" value="Ver">
+                    </div>
+                </figure>
+            </template>
+        </div>
+        <div class="icono_titulo">
+            <img src="images/DClogo.png" alt="dc" id="dc">
+            <h1>Heroes DC</h1>
+        </div>
+        <div class="card-container2" id="cards-container2">
+            <template id="template-card2">
+                <figure class="card2">
+                    <img src="" alt="" class="imagenDC">
+                    <div class="nombreBoton">  
+                        <figcaption></figcaption>
+                        <input type="button" class="boton" id="open2" value="Ver">
+                    </div>
+                </figure>
+            </template>
+        </div>
+    </main>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
