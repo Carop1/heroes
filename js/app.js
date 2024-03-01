@@ -265,15 +265,14 @@ function buscarEnArray() {
     if (resultado.length > 0) {
         resultado.forEach(elemento => {
                 
-                const el = cardContent[id-1];
+                
                 const $clone5 = document.importNode($templateModal, true);
-    
+            
                 $clone5.querySelector("#h11").textContent = elemento.title;
                 $clone5.querySelector(".imagenModal").setAttribute("src", elemento.img);
                 $clone5.querySelector(".imagenModal").setAttribute("alt", elemento.title);
                 $clone5.querySelector("figcaption").textContent = elemento.title;
-    
-                
+            
                 $fragmentModal.appendChild($clone5);
                 $modalContainer.appendChild($fragmentModal);
                 $modalContainer.classList.add('show');
@@ -295,7 +294,53 @@ function obtenerIdPorTexto(textoBuscado) {
     return idEncontrado;
 }
 function buscarPorTexto(textoBuscado) {
+    
     return cardContent.filter(elemento => elemento.title.includes(textoBuscado));
 }
 
+// function buscarEnArray2() {
+//     const textoBusqueda = document.getElementById("textoBusqueda").value;
+//     const resultado = buscarPorTexto(textoBusqueda);
+//     console.log(resultado);
+//     const id = obtenerIdPorTexto(textoBusqueda);
+//     console.log(id);
+//     const resultadoDiv = document.getElementById("resultado");
+//     resultadoDiv.innerHTML = "";
+
+//     if (resultado.length > 0) {
+//         resultado.forEach(elemento => {
+                
+//                 const el = cardContent[id-1];
+//                 const $clone6 = document.importNode($templateModal, true);
+    
+//                 $clone6.querySelector("#h11").textContent = elemento.title;
+//                 $clone6.querySelector(".imagenModal").setAttribute("src", elemento.img);
+//                 $clone6.querySelector(".imagenModal").setAttribute("alt", elemento.title);
+//                 $clone6.querySelector("figcaption").textContent = elemento.title;
+    
+                
+//                 $fragmentModal.appendChild($clone6);
+//                 $modalContainer.appendChild($fragmentModal);
+//                 $modalContainer.classList.add('show');
+            
+//         });
+//     } else {
+//         resultadoDiv.innerHTML = "No se encontraron resultados.";
+//     }
+// }
+// function obtenerIdPorTexto(textoBuscado) {
+//     let idEncontrado = null;
+
+//     cardContentDC.forEach(elemento => {
+//         if (elemento.title === textoBuscado) {
+//             idEncontrado = elemento.id;
+//         }
+//     });
+
+//     return idEncontrado;
+// }
+// function buscarPorTexto(textoBuscado) {
+    
+//     return cardContentDC.filter(elemento => elemento.title.includes(textoBuscado));
+// }
 
